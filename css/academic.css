@@ -1,0 +1,44 @@
+.leftPoint, .rightPoint {position: absolute; font-size: 500px; font-weight: 200; text-align: center; color: #5AD18F; z-index: -2; opacity: 0; top: 50%; margin-top: -417px;}
+.leftPoint.on, .rightPoint.on {z-index: 0; opacity: 1;}
+.leftPoint {left: 15.5%;}
+.rightPoint {right: 14.5%;}
+.topPoint, .bottomPoint {position: absolute; width: 30px; height: 100px; left: 50%; margin-left: -15px; z-index: -2; opacity: 0; display: none;}
+.topPoint.on, .bottomPoint.on {z-index: 0; opacity: 1;}
+.topPoint {top: 10%;}
+.bottomPoint {bottom: 10%;}
+.topPoint > div, .bottomPoint > div {background-color: #5AD18F; width: 30px; height: 30px; border-radius: 50%;}
+.topPoint > div:first-child, .bottomPoint > div:first-child {margin-bottom: 40px;}
+
+.programming_section, .web_section, .design_section, .music_section, .etc_section {position: absolute; display: inline-block; width: 320px; height: 150px; top: 50%; left: 50%; margin-top: -50px; margin-left: -152px; z-index: -2; opacity: 0;}
+.programming_section.on, .web_section.on, .design_section.on, .music_section.on, .etc_section.on {z-index: 2; opacity: 1;}
+
+.programming_section .prev_next_btn, .web_section .prev_next_btn, .design_section .prev_next_btn, .music_section .prev_next_btn, .etc_section .prev_next_btn {position: absolute; display: inline-block; width: 30px; height: 30px; bottom: 0%; left: 44%;}
+.programming_section .prev_next_btn > div, .web_section .prev_next_btn > div, .design_section .prev_next_btn > div, .music_section .prev_next_btn > div, .etc_section .prev_next_btn > div {font-size: 12px; font-weight: 300; cursor: pointer;}
+.etc_section .prev_next_btn > div:nth-child(2) {display: none;}
+
+.section_1 {display: inline-block; width: 75px; left: 0;}
+.section_2 {display: inline-block; width: 75px; left: 75px;}
+.section_3 {display: inline-block; width: 75px; left: 150px;}
+.section_4 {display: inline-block; width: 75px; left: 225px;}
+.name {font-size: 12px; font-weight: 700; text-align: center; margin-top: 5px;}
+.programming_section .section_1 .picture {width: 70px; height: 70px; background: url(../images/academic_logo/c.png) no-repeat center center; background-size: 100%;}
+.programming_section .section_2 .picture {width: 70px; height: 70px; background: url(../images/academic_logo/cpp.png) no-repeat center center; background-size: 100%;}
+.programming_section .section_3 .picture {width: 70px; height: 70px; background: url(../images/academic_logo/python.png) no-repeat center center; background-size: 100%;}
+.programming_section .section_4 .picture {width: 70px; height: 70px; background: url(../images/academic_logo/git.png) no-repeat center center; background-size: 100%;}
+.web_section .section_1 .picture {width: 70px; height: 70px; background: url(../images/academic_logo/html.png) no-repeat center center; background-size: 100%;}
+.web_section .section_2 .picture {width: 70px; height: 70px; background: url(../images/academic_logo/css.png) no-repeat center center; background-size: 100%;}
+.web_section .section_3 .picture {width: 70px; height: 70px; background: url(../images/academic_logo/javascript.png) no-repeat center center; background-size: 100%;}
+.web_section .section_4 .picture {width: 70px; height: 70px; background: url(../images/academic_logo/jquery.png) no-repeat center center; background-size: 100%;}
+.design_section .section_1 .picture {width: 70px; height: 70px; background: url(../images/academic_logo/powerpoint.png) no-repeat center center; background-size: 100%;}
+.design_section .section_2 .picture {width: 70px; height: 70px; background: url(../images/academic_logo/illustrator.png) no-repeat center center; background-size: 100%;}
+.design_section .section_3 .picture {width: 70px; height: 70px; background: url(../images/academic_logo/premiere.png) no-repeat center center; background-size: 100%;}
+.design_section .section_4 .picture {width: 70px; height: 70px; background: url(../images/academic_logo/imovie.png) no-repeat center center; background-size: 100%;}
+.music_section .section_2 .picture {width: 70px; height: 70px; background: url(../images/academic_logo/garageband.png) no-repeat center center; background-size: 100%;}
+.music_section .section_3 .picture {width: 70px; height: 70px; background: url(../images/academic_logo/audacity.png) no-repeat center center; background-size: 100%;}
+.etc_section .section_2 .picture {width: 70px; height: 70px; background: url(../images/academic_logo/excel.png) no-repeat center center; background-size: 100%;}
+.etc_section .section_3 .picture {width: 70px; height: 70px; background: url(../images/academic_logo/fusion.png) no-repeat center center; background-size: 100%;}
+
+@media(max-width: 1050px) {
+    .leftPoint, .rightPoint {display: none; z-index: -2;}
+    .topPoint, .bottomPoint {display: inline-block;}
+}

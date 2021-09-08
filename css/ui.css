@@ -1,0 +1,177 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	color: black;
+	text-decoration: none;
+	font: inherit;
+    font-family: 'Urbanist', sans-serif;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul, li {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html {
+	overflow: hidden;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body.stop_dragging {-ms-user-select: none; -moz-user-select: -moz-none; -khtml-user-select: none; -webkit-user-select: none; user-select: none;}
+
+.spinner-box {position: absolute; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: #FF5A5A; z-index: 99; animation: offscreen 1s 1.5s forwards ease-in-out;}
+.configure-border-1 { width: 115px; height: 115px; padding: 3px; position: absolute; display: flex; justify-content: center; align-items: center; background: white; animation: configure-clockwise 3s ease-in-out 0s infinite alternate;}
+.configure-border-2 {width: 115px; height: 115px; padding: 3px; left: -115px; display: flex; justify-content: center; align-items: center; background: white; transform: rotate(45deg); animation: configure-xclockwise 3s ease-in-out 0s infinite alternate;}
+.configure-core {width: 100%; height: 100%; background-color:#FF5A5A;}
+@keyframes configure-clockwise {0% {transform: rotate(0);} 25% {transform: rotate(90deg);} 50% {transform: rotate(180deg);} 75% {transform: rotate(270deg);} 100% {transform: rotate(360deg);}}
+@keyframes configure-xclockwise {0% {transform: rotate(45deg);} 25% {transform: rotate(-45deg);} 50% {transform: rotate(-135deg);} 75% {transform: rotate(-225deg);} 100% {transform: rotate(-315deg);}}
+@keyframes offscreen {0% {transform: translateX(0);} 100% {transform: translateX(-200%);}}
+
+#wrap {width: 100%; height: 100%;}
+#wrap header {width: 100%; height: 40px; position: fixed; top: 0px; z-index: 11; background-color: white; transition: .4s;}
+#wrap > h1 {font-size: 0;}
+.logo {position: absolute; top: 14px; left: 42px; font-weight: 800; font-size: 15px; z-index: 20;}
+.logocursor {cursor: pointer; transition: .4s;}
+.category {cursor: pointer;}
+header .btn_mode {position: absolute; top: 14px; right: 42px; font-size: 12px; font-weight: 500;}
+header .btn_mode .light {padding-right: 2px; cursor: pointer; transition: .4s}
+header .btn_mode .dark {padding-left: 2px; cursor: pointer; transition: .4s}
+#wrap #clickmenu {width: 40px; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 20; background-color: white; transition: .4s;}
+.clickmenu {width: 80px; height: 80px; position: fixed; top: 45%; left: 10px; cursor: pointer;}
+.clickmenu .menu_icon {position: absolute; top: 40%; left: 20px;}
+.clickmenu .menu_icon .line {float: right; clear: right; height: 2px; background-color: black; margin-bottom: 3px; transition: .5s;}
+.clickmenu .menu_icon .line:nth-child(1) {width: 16px;}
+.clickmenu .menu_icon .line:nth-child(2) {width: 20px;}
+.clickmenu .menu_icon .line:nth-child(3) {width: 12px;}
+.clickmenu .menu_txt {display: block; position: absolute; top: 10%; left: 60px; transform: rotate(180deg);}
+.clickmenu .menu_txt span {font-size: 1px; font-weight: 600; writing-mode: vertical-rl; transition: all .6s ease-in-out;} *
+.clickmenu .menu_txt span:nth-child(1) {height: 2px;}
+.clickmenu .menu_txt span:nth-child(2) {height: 3px;}
+.clickmenu .menu_txt span:nth-child(3) {height: 8px;}
+.clickmenu .menu_txt span:nth-child(4) {height: 12px;}
+.clickmenu:hover .menu_icon .line:nth-child(1) {width: 27px;}
+.clickmenu:hover .menu_icon .line:nth-child(2) {width: 40px;}
+.clickmenu:hover .menu_icon .line:nth-child(3) {width: 20px;}
+.clickmenu:hover .menu_txt span:nth-child(1) {transform: translateX(-14px);}
+.clickmenu:hover .menu_txt span:nth-child(2) {transform: translateX(-8px) !important;}
+.clickmenu:hover .menu_txt span:nth-child(3) {transform: translateX(-16px) !important;}
+.clickmenu:hover .menu_txt span:nth-child(4) {transform: translateX(-12px) !important;}
+#container_background {width: 100%; height: 100%; position: relative; margin: 0 auto;}
+#container_background .background {width: 50%; height: 100%; position: absolute;}
+#container_background #color {left: 0%; background-color: #FF5A5A; animation: left_onscreen 2s 1.5s forwards ease-in-out;}
+#container_background #noncolor {left: 50%; background-color: whitesmoke; transition: .4s; animation: right_onscreen 2s 1.5s forwards ease-in-out;}
+@keyframes left_onscreen {0% {transform: translateX(-200%);} 100% {transform: translateX(0);}}
+@keyframes right_onscreen {0% {transform: translateX(200%);} 100% {transform: translateX(0);}}
+.title {width: 100%; height: 280px; position: fixed; top: 50%; left: 0%; z-index: 10; margin-top: -140px;}
+.title .main {position: absolute; top: 0; left: 50%; font-weight: 900; font-size: 150px; transition: .4s; opacity: 0; text-align: center; margin-left: -135px;}
+.title .main:nth-child(1) {animation: fadeinfromtop 1.3s 2s forwards ease-in-out;}
+.title .main:nth-child(2) {top: 40%; animation: fadeinfrombottom 1.3s 2.2s forwards ease-in-out;}
+.title .point {position: absolute; top: 24%; left: 50%; font-weight: 900; font-size: 200px; color: #FF5A5A; opacity: 0; animation: fadeinfrombottom 1.3s 2.4s forwards ease-in-out; margin-left: 120px;}
+@keyframes fadeinfromtop {from {opacity: 0; transform: translateY(-40%);} to {opacity: 1; transform: translateY(0);}}
+@keyframes fadeinfrombottom {from {opacity: 0; transform: translateY(40%);} to {opacity: 1; transform: translateY(0);}}
+
+.scroll {position: absolute; top: 83%; right: 3%; cursor: pointer; font-weight: 500%; font-size: 12px; writing-mode: vertical-rl; transform: rotate(180deg);  animation-name: clickMe; animation-duration: 1s; animation-delay: 0s; animation-direction: alternate; animation-iteration-count: infinite; animation-timing-function: ease-in-out; transition: .4s;}
+@keyframes clickMe {from {top: 83%;} to {top: 85%;}}
+
+.phraseBox {position: absolute; width: 280px; height: 100px; top: 50%; margin-top: -50px; left: 20%; opacity: 0;}
+.phraseBox.on {opacity: 1; transition: 1s 2s;}
+.phraseBox_title {width: 280px; height: 40px; top: 0%; left: 0%;}
+.phraseBox_title_line {height: 2px; background-color: black; margin-bottom: 3px; margin-right: 40px;}
+.phraseBox_title_line:nth-child(1) {width: 20px;}
+.phraseBox_title_line:nth-child(2) {width: 40px;}
+.phraseBox_title_line:nth-child(3) {width: 30px;}
+.phraseBox_title_text {font-size: 18px; font-weight: 600; margin-top: 7px;}
+.phraseBox_content {width: 280px; height: 60px; bottom: 0%; left: 0%; padding-top: 7px; font-size: 14px; font-weight: 400;}
+.phraseBox .prev_next_btn {width: 70px; height: 14px; bottom: 0%;}
+.phraseBox .prev_next_btn > div {display: block; font-size: 12px; font-weight: 300; cursor: pointer;}
+
+#container_background #menu {width: 100%; height: 100%; position:fixed; margin: 0 auto; background-color: white; z-index: -1; opacity: 0; transition: .4s;}
+#container_background #menu.on {opacity: 0.9; z-index: 50;}
+#menu .logo {position: absolute; top: 65px; left: 12%; font-weight: 800; font-size: 15px;}
+#menu .logocursor {cursor: pointer; transition: .4s;}
+#menu .logocursor:hover {color: #FF5A5A !important;}
+#menu .logocursor:after {content: ""; position: absolute; left: 0; bottom: -5px; width: 0px; height: 1px; margin: 5px 0 0; transition: all 0.3s ease-in-out; transition-duration: .3s; opacity: 0; background-color: #FF5A5A;}
+#menu .logocursor:hover:after {width: 102.8px; opacity: 1;}
+#menu .menuContent {position: absolute; top: 12%; left: 12%; width: 400px; height: 76%;}
+#menu .menuContent ul li {position: relative; top: 100px; margin-bottom: 30px; font-weight: 800; font-size: 25px;}
+#menu .menuContent ul li a {transition: .4s;}
+#menu .menuContent ul li a.U:hover {color: #BE2457 !important;}
+#menu .menuContent ul li a.A:hover {color: #5AD18F !important;}
+#menu .menuContent ul li a.M:hover {color: #FFC846 !important;}
+#menu .menuContent ul li a.T:hover {color: #6482FF !important;}
+#menu .menuContent ul li a:after {content: ""; position: absolute; left: 0; bottom: -5px; width: 0px; height: 1px; margin: 5px 0 0; transition: all 2s ease-in-out; transition-duration: .3s; opacity: 0;}
+#menu .menuContent ul li a.U:hover:after {width: 142px; opacity: 1; background-color: #BE2457 !important;}
+#menu .menuContent ul li a.A:hover:after {width: 206px; opacity: 1; background-color: #5AD18F !important;}
+#menu .menuContent ul li a.M:hover:after {width: 77px; opacity: 1; background-color: #FFC846 !important;}
+#menu .menuContent ul li a.T:hover:after {width: 79px; opacity: 1; background-color: #6482FF !important;}
+#menu .contactMail {position: absolute; bottom: 100px; left:0%; width: 250px; height: 68px;}
+#menu .contactMail .contactTitle {font-weight: 700; font-size: 18px; margin-bottom: 20px; transition: .4s;}
+#menu .contactMail .contactAddress {font-weight: 500; font-size: 15px; transition: .4s;}
+#menu .colorwall {position: absolute; width: 12%; height: 76%; top: 12%; right: 12%; background-color: #FF5A5A;}
+#menu .colorwall .menu_btn_mode {position: absolute; top: -15px; right: 5px; font-size: 11px; font-weight: 500;}
+#menu .colorwall .menu_btn_mode .light {padding-right: 1.8px; cursor: pointer; transition: .4s}
+#menu .colorwall .menu_btn_mode .dark {padding-left: 1.8px; cursor: pointer; transition: .4s}
+#menu .colorwall button {display: block; position: absolute; width: 14px; height: 14px; right: -50%; transition: .4s; border: 0; padding: 0; cursor: pointer;}
+#menu > button.cancelMenu {display: block; position: absolute; width: 20px; height: 20px; top: 46%; border: 0; padding: 0; background: url(../images/cancel.png) no-repeat center center; background-size: 20px; left: 6%; cursor: pointer;}
+
+#wrap footer {width: 40px; height: 100%; position: fixed; top: 0px; right: 0px; z-index: 11; background-color: white; transition: .4s;}
+footer > button {display: block; position: absolute; width: 14px; height: 14px; right: 13px; transition: .4s; border: 0; padding: 0; cursor: pointer;}
+button.github {background: url(../images/github.png) no-repeat center center; background-size: 100%; top: 47%;}
+button.github:hover {background: url(../images/github_hover.png) no-repeat center center; background-size: 100%;}
+button.instagram {background: url(../images/instagram.png) no-repeat center center; background-size: 100%; top: 51%;}
+button.instagram:hover {background: url(../images/instagram_hover.png) no-repeat center center; background-size: 100%;}
+
+#wrap .under_bar {width: 100%; height: 40px; position: fixed; bottom: 0px; z-index: 11; background-color: white; transition: .4s;}
+
+.mediaquery.logo {position: fixed; top: 20px; left: 25px; font-weight: 800; font-size: 15px; z-index: 20; display: none;}
+.mediaqueryBtn {display: none;}
+#mediaqueryClickmenu {width: 40px; height: 80px; position: fixed; top: 45%; left: 10px; cursor: pointer; z-index: 20; background-color: transparent; transition: .4s; display: none;}
+#mediaqueryClickmenu .clickmenu {width: 40px;}
+#menu .mediaquerySNSBtn {position: absolute; width: 50px; height: 30px; top: 2%; left: 0%; border: 0; padding: 0; display: none;}
+#menu .mediaquerySNSBtn button {position: absolute; width: 14px; height: 14px; transition: .4s; border: 0; padding: 0; cursor: pointer;}
+#menu .mediaquerySNSBtn button.instagram {left: 30px; top: 14.5px;}
+
+@media(max-width: 600px) {
+	#wrap header, #wrap #clickmenu, #wrap footer, #wrap .under_bar {display: none;}
+	.mediaquery.logo, .mediaqueryBtn, #mediaqueryClickmenu, #menu .mediaquerySNSBtn {display: block;}
+	#menu > button.cancelMenu {top: 80%; left: 12%;}
+	#menu .colorwall {width: 25px; height: 80%; top: 10%;}
+	#menu .colorwall .menu_btn_mode {top: -22px; right: 0; font-size: 9px;}
+	#menu .colorwall .menu_btn_mode .light {padding-right: 0;}
+	#menu .colorwall .menu_btn_mode .dark {padding-left: 0;}
+	#menu .colorwall button {display: none;}
+}

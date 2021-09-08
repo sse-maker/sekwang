@@ -1,0 +1,96 @@
+.jeju_background {position: absolute; width: 100%; height: 100vh; z-index: -2; background: url(../images/jeju/hallasan.jpg) no-repeat center center; opacity: 0; background-size: cover;}
+.jeju_background.on {opacity: 1; z-index: 0; transition: 0.5s 0.5s;}
+.jeju {position: absolute; width: 167px; height: 200px; top: 50%; left: 50%; margin-top: -83.5px; margin-left: -85px; opacity: 0;}
+.jeju.on {opacity: 1; transition: 0.5s 0.5s;}
+.jeju_title {width: 167px; height: 122px; left: 50%; cursor: pointer;}
+.jeju_title_line {height: 2px; background-color: white; margin-bottom: 3px;}
+.jeju_title_line:nth-child(1) {width: 20px;}
+.jeju_title_line:nth-child(2) {width: 40px;}
+.jeju_title_line:nth-child(3) {width: 30px;}
+.jeju_title_text {font-size: 50px; font-weight: 900; margin-top: 10px; color: white;}
+.jeju .prev_next_btn {display: inline-block; width: 70px; height: 12px; bottom: 0%; margin-top: 20px; margin-left: 65px;}
+.jeju .prev_next_btn > div {font-size: 12px; font-weight: 300; cursor: pointer; color: white;}
+
+.timeline_title {position: absolute; width: 150px; height: 180px; top: 15%; left: 13%; opacity: 0; z-index: -2;}
+.timeline_title.on {opacity: 1; z-index: 2; transition: 0.5s 0.5s;}
+.timeline_title_line {height: 2px; background-color: #FF5A5A; margin-bottom: 3px;}
+.timeline_title_line:nth-child(1) {width: 20px;}
+.timeline_title_line:nth-child(2) {width: 30px;}
+.timeline_title_line:nth-child(3) {width: 40px;}
+.timeline_title_text {font-size: 50px; font-weight: 900; margin-top: 10px; color: #FF5A5A;}
+.timeline_title .prev_next_btn {display: inline-block; width: 70px; height: 12px; bottom: 0%; margin-top: 8px; margin-left: 2px; font-size: 12px; font-weight: 300; cursor: pointer;}
+
+.region {position: absolute; width: 100%; height: 100%; bottom: 0%; opacity: 0; z-index: -2;}
+.region.on {opacity: 1; z-index: 0; transition: 0.5s 1s;}
+
+.timeline_line {position: absolute; width: 100%; height: 30px; top: 50%; left: 0%; margin-top: -15px; background-color: whitesmoke;}
+.timeline_line_year {position: absolute; width: 700px; height: 14px; top: 50%; left: 50%; margin-top: -7px; margin-left: -340px;}
+.timeline_line_year > div {display: inline-block; width: 88px; margin-left: 60px; font-size: 14px; font-weight: 600; text-align: center;}
+.timeline_line_year > div:first-child {width: 80px !important; margin-left: 0 !important;}
+
+.region_content {position: absolute; width: 700px; height: 230px; top: 50%; left: 50%; margin-top: -115px; margin-left: -340px;}
+.first_year, .second_year, .third_year, .fourth_year, .fifth_year {display: inline-block; width: 88px; height: 230px; margin-left: 60px;}
+.first_year {width: 80px; margin-left: 0 !important;}
+.year_text, .year_picture {position: absolute;}
+.year_text {width: 88px;}
+.first_year .year_text {top: 60px; width: 80px !important;}
+.second_year .year_text {bottom: 60px;}
+.third_year .year_text {top: 60px;}
+.fourth_year .year_text {bottom: 60px;}
+.fifth_year .year_text {top: 60px;}
+.year_text > div {text-align: center; color: #FF5A5A;}
+.year_text > div:first-child {font-size: 14px; font-weight: 600;}
+.year_text > div:last-child {font-size: 16px; font-weight: 700;}
+.first_year .year_picture {bottom: 7px; width: 80px; height: 80px; border-radius: 50%; background: url(../images/timeline/seoul.png) no-repeat center center; background-size: 100%;}
+.second_year .year_picture {top: 7px; margin-left: 3px; width: 80px; height: 80px; border-radius: 50%; background: url(../images/timeline/seongnam.png) no-repeat center center; background-size: 100%;}
+.third_year .year_picture {bottom: 7px; margin-left: 3px; width: 80px; height: 80px; border-radius: 50%; background: url(../images/timeline/jeju.png) no-repeat center center; background-size: 100%;}
+.fourth_year .year_picture {top: 7px; margin-left: 3px; width: 80px; height: 80px; border-radius: 50%; background: url(../images/timeline/academic.png) no-repeat center center; background-size: 100%;}
+.fifth_year .year_picture {bottom: 7px; margin-left: 3px; width: 80px; height: 80px; border-radius: 50%; background: url(../images/timeline/academic.png) no-repeat center center; background-size: 100%;}
+
+@keyframes fadeinfromtop {from {opacity: 0; transform: translateY(-30%);} to {opacity: 1; transform: translateY(0);}}
+@keyframes fadeinfrombottom { from {opacity: 0; transform: translateY(30%);} to {opacity: 1; transform: translateY(0);}}
+
+@media(max-width: 860px) {
+    .timeline_line_year {margin-top: -8px; margin-left: -280px;}
+    .timeline_line_year > div {margin-left: 30px; font-size: 13px;}
+    .timeline_line_year > div:first-child {width: 70px !important;}
+    .region_content {margin-left: -280px;}
+    .first_year, .second_year, .third_year, .fourth_year, .fifth_year {margin-left: 30px;}
+    .first_year {width: 70px !important;}
+    .first_year .year_text {top: 65px; width: 70px !important;}
+    .second_year .year_text {bottom: 65px;}
+    .third_year .year_text {top: 65px;}
+    .fourth_year .year_text {bottom: 65px;}
+    .fifth_year .year_text {top: 65px;}
+    .year_text > div:first-child {font-size: 13px;}
+    .year_text > div:last-child {font-size: 14px;}
+
+    .first_year .year_picture {bottom: 17px; width: 70px; height: 70px;}
+    .second_year .year_picture {top: 17px; margin-left: 8px; width: 70px; height: 70px;}
+    .third_year .year_picture {bottom: 17px; margin-left: 8px; width: 70px; height: 70px;}
+    .fourth_year .year_picture {top: 17px; margin-left: 8px; width: 70px; height: 70px;}
+    .fifth_year .year_picture {bottom: 17px; margin-left: 8px; width: 70px; height: 70px;}
+}
+
+@media(max-width: 640px) {
+    .timeline_line {top: 60%;}
+    .timeline_line_year {margin-top: -10px; margin-left: -150px;}
+    .timeline_line_year > div {width: 50px; margin-left: 10px; font-size: 11px;}
+    .timeline_line_year > div:first-child {width: 40px !important;}
+    .region_content {top: 60%; margin-left: -150px;}
+    .first_year, .second_year, .third_year, .fourth_year, .fifth_year {width: 50px; margin-left: 10px;}
+    .first_year {width: 40px !important;}
+    .year_text {width: 50px;}
+    .first_year .year_text {top: 72px; width: 40px !important;}
+    .second_year .year_text {bottom: 72px;}
+    .third_year .year_text {top: 72px;}
+    .fourth_year .year_text {bottom: 72px;}
+    .fifth_year .year_text {top: 72px;}
+    .year_text > div:first-child {font-size: 9px;}
+    .year_text > div:last-child {font-size: 10px;}
+    .first_year .year_picture {bottom: 50px; width: 40px; height: 40px;}
+    .second_year .year_picture {top: 50px; margin-left: 6px; width: 40px; height: 40px;}
+    .third_year .year_picture {bottom: 50px; margin-left: 6px; width: 40px; height: 40px;}
+    .fourth_year .year_picture {top: 50px; margin-left: 6px; width: 40px; height: 40px;}
+    .fifth_year .year_picture {bottom: 50px; margin-left: 6px; width: 40px; height: 40px;}
+}

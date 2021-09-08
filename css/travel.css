@@ -1,0 +1,53 @@
+.korea {position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: -2; opacity: 0;}
+.korea.on {z-index: 2; opacity: 1;}
+.korea_map {position: absolute; width: 400px; height: 600px; top: 50%; left: 50%; margin-top: -300px; margin-left: -170px; background: url(../images/korea_map/korea.png) no-repeat center center; background-size: 100%;}
+.korea_text {position: absolute; width: 800px; height: 600px; top: 50%; left: 50%; margin-top: -300px; margin-left: -400px;}
+.gyeonggi_text, .gangwon_text, .chungcheongbuk_text, .chungcheongnam_text, .gyeongsangbuk_text, .gyeongsangnam_text, .jeollabuk_text, .jeollanam_text, .jejumap_text {position: absolute; display: block; font-size: 14px; font-weight: 500; color: #6482FF; cursor: pointer;}
+.gyeonggi_text {top: 23%; left: 23%; text-align: right;}
+.gangwon_text {top: 20%; right: 26%;}
+.chungcheongbuk_text {top: 35%; left: 16%; text-align: right;}
+.chungcheongnam_text {top: 45%; left: 18%; text-align: right;}
+.gyeongsangbuk_text {top: 45%; right: 15%;}
+.gyeongsangnam_text {top: 61%; right: 17%;}
+.jeollabuk_text {top: 53%; left: 25%; text-align: right;}
+.jeollanam_text {top: 61%; left: 21%; text-align: right;}
+.jejumap_text {top: 86%; right: 50%;}
+.korea .prev_next_btn {position: absolute; width: 30px; height: 12px; top: 15%; left: 15%;}
+.korea .prev_next_btn > div {font-size: 12px; font-weight: 300; cursor: pointer;}
+
+.gyeonggi, .gangwon, .chungcheongbuk, .chungcheongnam, .gyeongsangbuk, .gyeongsangnam, .jeollabuk, .jeollanam, .jejumap {position: absolute; width: 100%; height: 100%; background-color: white; z-index: -2; opacity: 0; transition: 0.5s;}
+.gyeonggi.on, .gangwon.on, .chungcheongbuk.on, .chungcheongnam.on, .gyeongsangbuk.on, .gyeongsangnam.on, .jeollabuk.on, .jeollanam.on, .jejumap.on {z-index: 99; opacity: 0.9;}
+.gyeonggi_picture {position: absolute; width: 550px; height: 550px; top: 50%; left: 50%; margin-top: -275px; margin-left: -275px; background: url(../images/korea_map/gyeonggi.png) no-repeat center center; background-size: 100%;}
+.gangwon_picture {position: absolute; width: 600px; height: 600px; top: 50%; left: 50%; margin-top: -300px; margin-left: -300px; background: url(../images/korea_map/gangwon.png) no-repeat center center; background-size: 100%;}
+.chungcheongbuk_picture {position: absolute; width: 500px; height: 500px; top: 50%; left: 50%; margin-top: -250px; margin-left: -250px; background: url(../images/korea_map/chungcheongbuk.png) no-repeat center center; background-size: 100%;}
+.chungcheongnam_picture {position: absolute; width: 550px; height: 550px; top: 50%; left: 50%; margin-top: -250px; margin-left: -250px; background: url(../images/korea_map/chungcheongnam.png) no-repeat center center; background-size: 100%;}
+.gyeongsangbuk_picture {position: absolute; width: 450px; height: 550px; top: 50%; left: 50%; margin-top: -275px; margin-left: -225px; background: url(../images/korea_map/gyeongsangbuk.png) no-repeat center center; background-size: 100%;}
+.gyeongsangnam_picture {position: absolute; width: 600px; height: 500px; top: 50%; left: 50%; margin-top: -250px; margin-left: -300px; background: url(../images/korea_map/gyeongsangnam.png) no-repeat center center; background-size: 100%;}
+.jeollabuk_picture {position: absolute; width: 600px; height: 500px; top: 50%; left: 50%; margin-top: -250px; margin-left: -300px; background: url(../images/korea_map/jeollabuk.png) no-repeat center center; background-size: 100%;}
+.jeollanam_picture {position: absolute; width: 600px; height: 600px; top: 50%; left: 50%; margin-top: -300px; margin-left: -300px; background: url(../images/korea_map/jeollanam.png) no-repeat center center; background-size: 100%;}
+.jejumap_picture {position: absolute; width: 600px; height: 350px; top: 50%; left: 50%; margin-top: -175px; margin-left: -300px; background: url(../images/korea_map/jeju.png) no-repeat center center; background-size: 100%;}
+
+@media(max-width: 640px) {
+    .korea .prev_next_btn {top: 25%;}
+    .korea_map {width: 200px; height: 300px; margin-top: -150px; margin-left: -100px;}
+    .korea_text {width: 400px; height: 300px; margin-top: -150px; margin-left: -200px;}
+    .gyeonggi_text {left: 15%;}
+    .gangwon_text {right: 27%;}
+    .chungcheongbuk_text {left: 7%;}
+    .chungcheongnam_text {left: 9%; top: 46%;}
+    .gyeongsangbuk_text {right: 13%;}
+    .gyeongsangnam_text {right: 16%;}
+    .jeollabuk_text {left: 19%;}
+    .jeollanam_text {left: 13%;}
+    .jejumap_text {right: 51%;}
+    .gyeonggi_text, .gangwon_text, .chungcheongbuk_text, .chungcheongnam_text, .gyeongsangbuk_text, .gyeongsangnam_text, .jeollabuk_text, .jeollanam_text, .jejumap_text {font-size: 10px;}
+    .gyeonggi_picture {width: 300px; height: 300px; top: 50%; left: 50%; margin-top: -150px; margin-left: -150px;}
+    .gangwon_picture {width: 320px; height: 320px; top: 50%; left: 50%; margin-top: -160px; margin-left: -160px;}
+    .chungcheongbuk_picture {width: 280px; height: 280px; top: 50%; left: 50%; margin-top: -140px; margin-left: -140px;}
+    .chungcheongnam_picture {width: 310px; height: 310px; top: 50%; left: 50%; margin-top: -155px; margin-left: -155px;}
+    .gyeongsangbuk_picture {width: 260px; height: 300px; top: 50%; left: 50%; margin-top: -150px; margin-left: -130px;}
+    .gyeongsangnam_picture {width: 310px; height: 280px; top: 50%; left: 50%; margin-top: -140px; margin-left: -155px;}
+    .jeollabuk_picture {width: 310px; height: 280px; top: 50%; left: 50%; margin-top: -140px; margin-left: -155px;}
+    .jeollanam_picture {width: 320px; height: 320px; top: 50%; left: 50%; margin-top: -160px; margin-left: -160px;}
+    .jejumap_picture {width: 320px; height: 200px; top: 50%; left: 50%; margin-top: -100px; margin-left: -160px;}
+}

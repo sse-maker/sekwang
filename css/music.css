@@ -1,0 +1,58 @@
+.playlist {position: absolute; width: 900px; height: 350px; top: 50%; left: 50%; margin-top: -175px; margin-left: -450px; z-index: -2; opacity: 0;}
+.playlist.on {z-index: 2; opacity: 1;}
+.playlist_btn {position: absolute; width: 500px; height: 250px; top: 50%; left: 0; margin-top: -125px;}
+.playlist_prevbtn {display: inline-block; width: 80px; height: 80px; background: url(../images/playlist/playlist_prevbtn.png) no-repeat center center; background-size: 100%; margin-right: 30px; cursor: pointer; transition: .2s;}
+.playlist_play {display: inline-block; width: 250px; height: 250px; background: url(../images/playlist/playlist_play.png) no-repeat center center; background-size: 100%;}
+.playlist_play .playlist_startbtn {display: inline-block; width: 80px; height: 80px; margin-top: 85px; margin-left: 85px; background: url(../images/playlist/playlist_startbtn.png) no-repeat center center; background-size: 100%; cursor: pointer; transition: .2s;}
+.playlist_play.clickstartbtn1 {animation: rotate_play 10s linear infinite; transform-origin: 50% 50%;}
+.playlist_play .singer {position: absolute; width: 250px; height: 18px; margin-top: 10px;}
+.playlist_play .singer > div {display: none; font-size: 18px; font-weight: 700; color: whitesmoke; text-align: center;}
+.playlist_play .singer > div:first-child {display: block;}
+.playlist_play .playlist_startbtn.clickstartbtn2 {animation: rotate_startbtn 10s linear infinite; transform-origin: 50% 50%;}
+@keyframes rotate_play {100% {transform: rotate(360deg);}}
+@keyframes rotate_startbtn {100% {transform: rotate(-360deg);}}
+.playlist_nextbtn {display: inline-block; width: 80px; height: 80px; background: url(../images/playlist/playlist_nextbtn.png) no-repeat center center; background-size: 100%; margin-left: 30px; cursor: pointer; transition: .2s;}
+.playlist_prevbtn:hover, .playlist_play .playlist_startbtn:hover, .playlist_nextbtn:hover {opacity: 0.5;}
+.playlist_text {position: absolute; top: 50%; right: 0; margin-top: -70px; font-size: 70px; font-weight: 800; color: #FFC846;}
+.playlist .prev_next_btn {position: absolute; width: 30px; height: 24px; bottom: 55px; right: 290px;}
+.playlist .prev_next_btn > div {font-size: 12px; font-weight: 300; cursor: pointer;}
+
+.guitarist {position: absolute; width: 900px; height: 500px; top: 50%; left: 50%; margin-top: -250px; margin-left: -450px; background: url(../images/playlist/guitarist.png) no-repeat center center; background-size: 100%; z-index: -2; opacity: 0;}
+.guitarist.on {z-index: 2; opacity: 1;}
+.guitarist_text {position: absolute; width: 350px; height: 180px; top: 50%; right: 115px; margin-top: -70px;}
+.guitarist_text .guitarist_title {font-size: 45px; font-weight: 800; color: #FFC846; text-align: center;}
+.guitarist_text > div:last-child {margin-top: 60px;}
+.guitarist_play {position: absolute; width: 350px; height: 20px; margin-top: 20px;}
+.guitarist_play > div {display: none; font-size: 20px; font-weight: 700; color: white; text-align: center; cursor: pointer;}
+.guitarist_play > div:first-child {display: block;}
+.guitarist_instagram {position: absolute; width: 70px; height: 30px; font-size: 14px; top: 50%; left: 270px; margin-top: -13px; font-weight: 700; color: #FFC846; text-align: center; cursor: pointer;}
+.guitarist .prev_next_btn {position: absolute; width: 30px; height: 24px; top: 50%; left: 50px;}
+.guitarist .prev_next_btn > div {font-size: 12px; font-weight: 300; cursor: pointer;}
+.mediaquery_guitarist_play {display: none; position: absolute; width: 300px; height: 20px; transform: rotate(90deg); left: -15px; top: 142px;}
+.mediaquery_guitarist_play > div {display: none; font-size: 18px; font-weight: 700; color: white; text-align: center; cursor: pointer;}
+.mediaquery_guitarist_play > div:first-child {display: block;}
+
+@media (max-width: 1000px) {
+    .playlist {width: 300px; height: 500px; top: 50%; left: 50%; margin-top: -250px; margin-left: -150px;}
+    .playlist_btn {width: 300px; height: 150px; top: 60px; left: 5px; margin-top: 0;}
+    .playlist_play {width: 160px; height: 160px;}
+    .playlist_play .singer {width: 160px; height: 12px; margin-top: 6px;}
+    .playlist_play .singer > div {font-size: 12px;}
+    .playlist_play .playlist_startbtn {width: 50px; height: 50px; margin-top: 55px; margin-left: 55px;}
+    .playlist_prevbtn, .playlist_nextbtn {width: 50px; height: 50px;}
+    .playlist_prevbtn {margin-right: 10px;}
+    .playlist_nextbtn {margin-left: 10px;}
+    .playlist_text {width: 300px; height: 120px; margin-top: 30px; font-size: 50px; text-align: center;}
+    .playlist .prev_next_btn {bottom: 40px; left: 50%; margin-left: -15px;}
+}
+
+@media (max-width: 980px) {
+    .guitarist {width: 600px; height: 300px; top: 50%; left: 50%; margin-top: -150px; margin-left: -300px; transform: rotate(-90deg);}
+    .guitarist_text {transform: rotate(90deg); height: 90px; left: 230px; margin-top: -39px;}
+    .guitarist_text .guitarist_title {color: #FFA500;}
+    .guitarist_text > div:last-child {margin-top: 0;}
+    .guitarist_play {display: none;}
+    .guitarist_instagram {transform: rotate(90deg); left: 162px; margin-top: -15px; font-size: 10px;}
+    .mediaquery_guitarist_play {display: block;}
+    .guitarist .prev_next_btn {transform: rotate(90deg); top: 143px; left: 25px;}
+}

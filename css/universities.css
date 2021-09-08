@@ -1,0 +1,44 @@
+.gist, .postech {position: absolute; width: 260px; height: 180px; top: 50%; left: 50%; margin-top: -30px; margin-left: -110px; opacity: 0; z-index: -2;}
+.gist.on {opacity: 1; z-index: 0;}
+.postech.on {opacity: 1; z-index: 0;}
+.gist_logo {position: absolute; width: 200px; height: 60px; left: 50%; margin-left: -100px; background: url(../images/universities_logo/gist_logo.png) no-repeat center center; background-size: 100%; cursor: pointer;}
+.postech_logo {position: absolute; width: 200px; height: 60px; left: 50%; margin-left: -100px; background: url(../images/universities_logo/postech_logo.png) no-repeat center center; background-size: 100%; cursor: pointer;}
+.gist_year, .postech_year {position: relative; height: 60px; top: 70px;}
+.gist_year_title, .postech_year_title {font-size: 17px; font-weight: 700; text-align: center; padding-bottom: 5px; border-bottom: 1px solid black;}
+.gist_year_content, .postech_year_content {font-size: 12px; font-weight: 600; text-align: center; padding-top: 5px;}
+.gist .prev_next_btn, .postech .prev_next_btn {position: relative; display: inline-block; width: 70px; height: 12px; top: 60px; margin-top: 20px; margin-left: 118px;}
+.gist .prev_next_btn > div, .postech .prev_next_btn > div {font-size: 12px; font-weight: 300; cursor: pointer;}
+
+.gist_content, .postech_content {position: absolute; width: 100%; height: 100%; left: 0%; opacity: 0; z-index: -2;}
+.gist_content.on, .postech_content.on {opacity: 1; z-index: 0;}
+.gist_content .education, .gist_content .interest, .gist_content .like, .gist_content .club, .gist_content .activities, .postech_content .interest, .postech_content .like, .postech_content .club, .postech_content .activities, .postech_content .education {width: 190px;}
+.gist_content .education, .postech_content .interest {position: absolute; top: 24%; left: 13%;}
+.gist_content .like, .postech_content .like {position: absolute; top: 49%; left: 13%;}
+.gist_content .club, .postech_content .club {position: absolute; top: 64%; left: 13%;}
+.gist_content .activities, .postech_content .activities {position: absolute; top: 24%; right: 20%;}
+.gist_content .interest, .postech_content .education {position: absolute; top: 54%; right: 20%;}
+.textTitle {font-size: 16px; font-weight: 700; border-bottom: 1px solid black; padding-bottom: 5px;}
+.gist_content .textTitle {color: #FF7F50;}
+.postech_content .textTitle {color: #BE2450;}
+.textArrange {font-size: 13px; font-weight: 600; padding-top: 5px;}
+
+@media(max-width: 1000px) {
+    .gist_content .education, .gist_content .like, .gist_content .club, .gist_content .activities, .gist_content .interest, .postech_content .interest, .postech_content .like, .postech_content .club, .postech_content .activities, .postech_content .education {left: 50%; margin-left: -115px;}
+    .gist_content .education, .postech_content .interest {top: 10%;}
+    .gist_content .like, .postech_content .like {top: 30%;}
+    .gist_content .club, .postech_content .club {top: 42%;}
+    .gist_content .activities {top: 54%;}
+    .postech_content .activities {top: 52%;}
+    .gist_content .interest, .postech_content .education {top: 78%;}
+}
+
+@media(max-width: 600px) {
+    .gist_logo, .postech_logo {width: 140px; height: 30px; margin-left: -70px;}
+    .gist_year, .postech_year {top: 45px;}
+    .gist_year_title, .postech_year_title {font-size: 13px;}
+    .gist_year_content, .postech_year_content {font-size: 8px;}
+    .gist .prev_next_btn, .postech .prev_next_btn {margin-top: 0px; margin-left: 70px;}
+    .gist, .postech, .gist_content .education, .gist_content .like, .gist_content .club, .gist_content .activities, .gist_content .interest, .postech_content .interest, .postech_content .like, .postech_content .club, .postech_content .activities, .postech_content .education {width: 160px; left: 50%; margin-left: -80px;}
+    .textTitle {font-size: 14px;}
+    .textArrange {font-size: 11px;}
+}
